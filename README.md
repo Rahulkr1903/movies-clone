@@ -33,38 +33,21 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+a. Instructions about how to run and test your code.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+->To run the code, you have to run `npm start`.
 
-## Learn More
+b. List elements from the challenge that you think you have done well, and 
+that exemplify your proficiency. Please describe why you chose those elements, and how they demonstrate your proficiency.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+-> Working on the given task challenged me on different parameters,be it responsive UI ,the API calls or the error handling.I enjoyed the task throughout.The
+most exicting part came when we are trying of fetch movie details.While trying to fetch the Movie Title,Rating,Year of release,Length (HH:MM),Description are present on a details API but when Director and Cast were present on another(credits API).Finding the directors name was a bit challenging , to go through so many consol.log,was fun and cahllenging.So the selection of API was also important and the way to implement them together without any noticable changes were exicting.The search part was also fun to work on.Overall I would state that I have done a good job on Serach,API calls and achieving the desired UI as stated.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+c. List what you would do to improve your solution if you had 4 more hours 
+available for this task. Describe why you would do those things.
 
-### Analyzing the Bundle Size
+-> I would have implemented a register and login page , if I had more time.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
