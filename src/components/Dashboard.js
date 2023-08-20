@@ -126,6 +126,7 @@ export default function Dashboard() {
    function onSearch(e){
     e.preventDefault();
     var query= `/search/movie?query=${searchformData}&include_adult=false&language=en-US&page=1` ;
+     if(searchformData){
     fetchDataFromApi(query)
     .then(data => 
       {if(data.name==="AxiosError"){
@@ -137,6 +138,7 @@ export default function Dashboard() {
       }
     }
   })
+     }
    }
  
 
