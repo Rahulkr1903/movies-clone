@@ -57,6 +57,8 @@ const styles = {
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
+  display: 'flex',  // Add this line
+  alignItems: 'center',  // Add this line
   borderRadius: theme.shape.borderRadius,
   backgroundColor: alpha(theme.palette.common.white, 0.15),
   '&:hover': {
@@ -126,6 +128,7 @@ export default function Dashboard() {
    function onSearch(e){
     e.preventDefault();
     var query= `/search/movie?query=${searchformData}&include_adult=false&language=en-US&page=1` ;
+    if(searchformData){
     fetchDataFromApi(query)
     .then(data => 
       {if(data.name==="AxiosError"){
@@ -137,6 +140,7 @@ export default function Dashboard() {
       }
     }
   })
+}
    }
  
 
@@ -167,7 +171,7 @@ export default function Dashboard() {
               onChange={onSearchChange}
               value={searchformData}
               />
-            <Button variant="text" type="submit" color="secondary" onClick={onSearch} sx={{ marginLeft: 2 }}>Search</Button>
+            <Button variant="text" type="submit" color="secondary" onClick={onSearch} sx={{ marginLeft: 2}}>Search</Button>
           </Search>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'block', sm: 'block', md: 'block' } }}>
