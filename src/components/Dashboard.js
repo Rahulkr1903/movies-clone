@@ -57,8 +57,8 @@ const styles = {
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
-  display: 'flex',  // Add this line
-  alignItems: 'center',  // Add this line
+  display: 'flex', 
+  alignItems: 'center',
   borderRadius: theme.shape.borderRadius,
   backgroundColor: alpha(theme.palette.common.white, 0.15),
   '&:hover': {
