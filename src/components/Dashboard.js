@@ -11,7 +11,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { Button, CardActionArea, CardActions } from "@mui/material";
+import { Button, CardActionArea, CardActions, CircularProgress } from "@mui/material";
 import {useNavigate} from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { fetchDataFromApi } from '../utils/Api';
@@ -106,6 +106,7 @@ export default function Dashboard() {
   const [searchData,setSearchData]=useState("");
   const [error,setError]=useState(false);
   const [noMovie,setNoMovie]=useState(false);
+  const [loading,setLoading] =useState(false);
 
   var query='/movie/upcoming?language=en-US&page=1';
   useEffect(() => {
@@ -159,7 +160,13 @@ export default function Dashboard() {
       return <Typography>No such movies available, Please refersh</Typography>;
     }
   return (
-    <>  
+    <> 
+     {/* {
+      loading ? ( <Box sx={{ display: 'flex' }}>
+      <CircularProgress />
+    </Box>) : (<>skxs</>)
+
+    } */}
       <AppBar position="sticky">
         <Toolbar component="form" onSubmit={onSearch}>
           <Search   >
@@ -185,7 +192,7 @@ export default function Dashboard() {
      
     {searchData ? 
    
-     <Box style={styles.container}>
+     (<Box style={styles.container}>
      {searchData.map((data, index) => (
        <Card key={index} sx={styles.card} onClick={() => handleClick(data.id)}>
          <CardActionArea>
@@ -212,9 +219,9 @@ export default function Dashboard() {
           </Typography>
        </Card>
      ))}
-   </Box> 
+   </Box> )
    : 
-    <Box style={styles.container}>
+   ( <Box style={styles.container}>
       {apiData.map((data, index) => (
         <Card key={index} sx={styles.card} onClick={() => handleClick(data.id)}>
           <CardActionArea>
@@ -241,7 +248,7 @@ export default function Dashboard() {
           </Typography>
         </Card>
       ))}
-    </Box>
+    </Box>)
     
 }
 
